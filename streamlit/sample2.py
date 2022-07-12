@@ -21,7 +21,10 @@ rows = run_query("SELECT * from gu;")
 
 import pandas as pd
 df=pd.DataFrame(rows)
-st.area_chart(df)
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+st.area_chart(chart_data)
 
 # Print results.
 for row in rows:
