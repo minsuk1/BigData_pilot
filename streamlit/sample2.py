@@ -20,6 +20,7 @@ def run_query(query):
 rows = run_query("SELECT * from gu;")
 
 import pandas as pd
+import numpy as np
 df=pd.DataFrame(rows)
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
