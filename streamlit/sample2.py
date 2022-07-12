@@ -17,7 +17,11 @@ def run_query(query):
         cur.execute(query)
         return cur.fetchall()
 
-rows = run_query("SELECT * from gu;")
+rows = run_query("SELECT * from mytable;")
+
+import pandas as pd
+df=pd.DataFrame(rows)
+st.area_chart(df)
 
 # Print results.
 for row in rows:
